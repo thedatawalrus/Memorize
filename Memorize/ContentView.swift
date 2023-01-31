@@ -11,20 +11,13 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel:EmojiMemoryGame
-//    @State var emojis = [
-//        ["🚲","🚁","🚑","🛴","🛺","🚆","🚗"," 🏎","🚚","🚎","🏎"], ["⚽️","🏀","🏈","⚾️","🥎","🎾","🏐","🏉","🎱","🏓"],["🐶","🐱","🐭","🐹","🐰","🦊","🐻","🐼","🐻‍❄️","🐨"]
-//    ]
-//
-//    @State var emojiCount = 9
-//    @State var emojiCat = 0
+
     
     var body: some View {
-    
-//            Text("Memorize!")
-//                .font(.largeTitle)
+
         VStack {
             HStack {
-                Text("Memorize!")
+                Text("Memorize...\(viewModel.themeName)!")
                 Spacer()
                 Text("Score: \(viewModel.score)")
                     
@@ -44,9 +37,8 @@ struct ContentView: View {
                         }
                     }
                 }
-//            .foregroundColor(EmojiMemoryGame.newColor(someColor:viewModel.theme.cardColor))
+
             .foregroundColor(viewModel.newColor)
-    //            .font(.largeTitle)
             .padding(.horizontal)
             
                 
@@ -62,54 +54,8 @@ struct ContentView: View {
             
             
         }
-//        .padding(.horizontal)
 
-    
-//    var car: some View {
-//        Button {
-//                emojis[0].shuffle()
-//                emojiCat = 0
-//
-//        } label: {
-//            VStack{
-//                Image(systemName: "car.circle")
-//                Text("Vehicles")
-//                    .font(.footnote)
-//            }
-//        }
-//    }
-//
-//    var sport: some View {
-//        Button {
-////            EmojiMemoryGame.createMemoryGame(EmojiMemoryGame.themes.shuffled())
-//            viewModel.cards
-//            print(viewModel.cards)
-////            var viewModel:EmojiMemoryGame
-////            print(EmojiMemoryGame.themes)
-////            self.view.setNeedsLayout()
-//        } label: {
-//            VStack{
-//                Image(systemName: "figure.walk.circle")
-//                Text("New Game")
-//                    .font(.footnote)
-//            }
-//
-//        }
     }
-//
-//    var animal: some View {
-//        Button {
-//            emojis[2].shuffle()
-//            emojiCat = 2
-//        } label: {
-//            VStack{
-//                Image(systemName: "pawprint.circle")
-//                Text("Animals")
-//                    .font(.footnote)
-//            }
-//
-//        }
-//    }
     
 
 }
@@ -134,8 +80,7 @@ struct CardView: View {
                 shape.fill()
             }
         }
-//        .onTapGesture {
-//            isFaceUp = !isFaceUp
+
     }
 }
 

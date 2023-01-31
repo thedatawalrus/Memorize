@@ -52,7 +52,6 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
             cards[chosenIndex].isFaceUp.toggle()
             
         }
-//        print("\(cards)")
     }
     init(numberOfPairsOfCards: Int, createCardContent: (Int) -> CardContent) {
         cards = Array<Card>()
